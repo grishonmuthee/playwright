@@ -1,7 +1,5 @@
 # Playwright (Python)
 
-Repo for **Playwright Python projects for CB Bot**.
-
 This repository serves as a reference and playground for using **Playwright with Python**, focusing on reliable browser automation using modern best practices.
 
 ---
@@ -115,7 +113,7 @@ locator.is_enabled()
 
 ---
 
-## ⏱ Waiting & Events
+##  Waiting & Events
 
 | Method                                              | Description                   |
 | --------------------------------------------------- | ----------------------------- |
@@ -127,7 +125,7 @@ locator.is_enabled()
 
 ---
 
-## 🛠 Utilities & Advanced Usage
+##  Utilities & Advanced Usage
 
 ```python
 page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
@@ -183,9 +181,6 @@ page.set_default_timeout(30000)
 ## Resources
 
 * Official Docs: [https://playwright.dev/python/docs/api](https://playwright.dev/python/docs/api)
-
-This covers **~90% of daily Playwright usage** 🚀
-Practice with examples and expand as needed.
 
 ---
 
