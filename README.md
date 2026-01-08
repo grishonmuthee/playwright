@@ -2,6 +2,19 @@
 
 This repository serves as a reference and playground for using **Playwright with Python**, focusing on reliable browser automation using modern best practices.
 
+Playwright Python
+
+Browser automation
+
+Web automation
+
+End-to-end testing (E2E)
+
+Playwright sync API
+
+Cross-browser testing
+
+Locators & best practices
 ---
 
 ## Core Playwright Concepts (Python – Sync API)
