@@ -1,8 +1,4 @@
-Here’s a clean, **GitHub-ready `README.md`** version of your content with proper Markdown structure, tables, and code blocks. You can paste this directly into your repo.
-
----
-
-# 🎭 Playwright (Python)
+# Playwright (Python)
 
 Repo for **Playwright Python projects for CB Bot**.
 
@@ -10,7 +6,7 @@ This repository serves as a reference and playground for using **Playwright with
 
 ---
 
-## 📌 Core Playwright Concepts (Python – Sync API)
+## Core Playwright Concepts (Python – Sync API)
 
 Playwright’s API is built around **auto-waiting**, **locators**, and **cross-browser support**.
 
@@ -40,7 +36,7 @@ with sync_playwright() as p:
 
 ---
 
-## 🎯 Recommended Locator Methods (Best Practice)
+## Recommended Locator Methods (Best Practice)
 
 Playwright locators are **resilient, user-facing, and auto-waiting**.
 
@@ -57,7 +53,7 @@ Playwright locators are **resilient, user-facing, and auto-waiting**.
 
 ---
 
-## 🔗 Locator Actions & Methods
+## Locator Actions & Methods
 
 Once you have a locator, you can chain actions and queries.
 
@@ -104,7 +100,7 @@ locator.is_enabled()
 
 ---
 
-## 🌐 Navigation & Page Methods
+##  Navigation & Page Methods
 
 | Method                                   | Description                  |
 | ---------------------------------------- | ---------------------------- |
@@ -165,7 +161,7 @@ context.tracing.stop(path="trace.zip")
 
 ---
 
-## ✅ Best Practices
+##  Best Practices
 
 * Always use **locators (`get_by_*`)** over raw selectors
 * Prefer `fill()` over `type()`
@@ -184,7 +180,7 @@ page.set_default_timeout(30000)
 
 ---
 
-## 📚 Resources
+## Resources
 
 * Official Docs: [https://playwright.dev/python/docs/api](https://playwright.dev/python/docs/api)
 
@@ -192,14 +188,4 @@ This covers **~90% of daily Playwright usage** 🚀
 Practice with examples and expand as needed.
 
 ---
-
-If you want, I can also:
-
-* Add **pytest examples**
-* Create a **repo folder structure**
-* Add **CI with GitHub Actions**
-* Convert this into a **Playwright testing cheat sheet**
-
-Just say the word.
-
 
