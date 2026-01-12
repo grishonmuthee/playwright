@@ -44,8 +44,7 @@ playwright install-deps
 
 ---
 
-#  Installing Playwright (Python) on Ubuntu 24.04.3 LTS
-
+#  Installing Playwright (Python) on Ubuntu 24.04.3 LTS (Step-by-Step Guide)
 
 ---
 
