@@ -358,6 +358,14 @@ page.set_default_timeout(30000)
 
 * Official Docs: [https://playwright.dev/python/docs/api](https://playwright.dev/python/docs/api)
 
+##  Author
+
+Built and maintained by **Grishon Muthee / github.com/grishonmuthee**.
+
+This repo reflects my learning process and practical experience with Playwright (Python).
+Feel free to fork, adapt, or use it as a reference in your own projects.
+
+
 ---
 
 
