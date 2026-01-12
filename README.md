@@ -181,6 +181,7 @@ playwright install
 
 ## Core Playwright Concepts (Python – Sync API). Locators & best practices
 
+---
 Playwright’s API is built around **auto-waiting**, **locators**, and **cross-browser support**.
 
 ### Lifecycle & Core Structure
