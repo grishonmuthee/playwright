@@ -18,13 +18,12 @@ Here’s a **clean, GitHub-ready `README.md` section** you can paste directly in
 
 ---
 
-# 🎭 Installing Playwright (Python) on Ubuntu 24.04.3 LTS
+#  Installing Playwright (Python) on Ubuntu 24.04.3 LTS
 
-This guide walks you through installing **Playwright with Python** on **Ubuntu 24.04.3 LTS**, which is an **officially supported** Playwright platform.
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
 
 ### Update system packages
 
@@ -48,7 +47,7 @@ sudo apt install -y python3 python3-pip python3-venv
 
 ---
 
-## 🐍 Create a Virtual Environment (Recommended)
+## Create a Virtual Environment (Recommended)
 
 Using a virtual environment keeps dependencies isolated.
 
@@ -61,7 +60,7 @@ You should now see `(venv)` in your terminal prompt.
 
 ---
 
-## 🎭 Install Playwright (Python)
+## Install Playwright (Python)
 
 ### Install the Playwright package
 
@@ -76,32 +75,23 @@ pip install playwright
 playwright install
 ```
 
-This installs:
-
-* Chromium
-* Firefox
-* WebKit
+This installs: Chromium, Firefox, WebKit
 
 ---
 
-## 🧩 Install System Dependencies (Required)
-
-Ubuntu requires additional system libraries for browsers to run properly.
+## Install System Dependencies
 
 ```bash
 playwright install-deps
 ```
-
-✅ On **Ubuntu 24.04 LTS**, this works out of the box.
-
 ---
 
-## ✅ Verify the Installation
+## Verify the Installation
 
 Run this quick test to confirm everything works:
 
 ```bash
-python - <<EOF
+python
 from playwright.sync_api import sync_playwright
 
 with sync_playwright() as p:
@@ -110,7 +100,6 @@ with sync_playwright() as p:
     page.goto("https://example.com")
     print(page.title())
     browser.close()
-EOF
 ```
 
 Expected output:
@@ -119,11 +108,9 @@ Expected output:
 Example Domain
 ```
 
-🎉 If you see this, Playwright is installed correctly.
-
 ---
 
-## 👀 Run in Headful Mode (Visible Browser)
+## Run in Headful Mode (Visible Browser)
 
 To see the browser window while running:
 
@@ -133,7 +120,7 @@ browser = p.chromium.launch(headless=False)
 
 ---
 
-## 🛠 Troubleshooting
+## Troubleshooting
 
 ### `playwright install-deps` fails
 
@@ -156,38 +143,22 @@ playwright install
 
 ---
 
-## 📌 Best Practices
+##  Best Practices
 
-* ✅ Use **Ubuntu 24.04 LTS**
-* ✅ Always use a **virtual environment**
-* ❌ Do not use `sudo pip`
-* ✅ Prefer `get_by_*` locators
-* ❌ Avoid hard waits like `wait_for_timeout`
+* Use **Ubuntu 24.04 LTS**
+* Always use a **virtual environment**
+* Do not use `sudo pip`
+* Prefer `get_by_*` locators
+* Avoid hard waits like `wait_for_timeout`
 
 ---
 
-## 📚 Resources
+## Resources
 
 * Official Playwright Python Docs:
   [https://playwright.dev/python/docs/intro](https://playwright.dev/python/docs/intro)
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Locators & best practices
