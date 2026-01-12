@@ -16,6 +16,19 @@ This repository serves as a reference and playground for using **Playwright with
 
 ---
 
+## Why this repository exists
+
+I built this repository as a hands-on learning and reference space while working with
+Playwright (Python) for browser automation and bot development.
+
+Instead of scattered notes, this repo captures:
+- What I actually use day-to-day
+- Patterns that work reliably
+- Common setup issues and fixes (especially on Ubuntu)
+- Practical Playwright examples without unnecessary abstraction
+
+---
+
 #  Installing Playwright (Python) on Ubuntu 24.04.3 LTS
 
 
