@@ -34,12 +34,12 @@ Instead of scattered notes, this repo captures:
 ```bash
 git clone https://github.com/grishonmuthee/playwright.git
 cd playwright
-sudo apt update && sudo apt upgrade -y
 python3 -m venv venv
 source venv/bin/activate
 pip install playwright
 playwright install
 playwright install-deps
+
 
 ---
 
@@ -53,6 +53,7 @@ playwright install-deps
 ### Update system packages
 
 ```bash
+sudo apt update && sudo apt upgrade -y
 ```
 
 ### Install Python (if not already installed)
