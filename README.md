@@ -14,8 +14,6 @@ This repository serves as a reference and playground for using **Playwright with
 
 * Cross-browser testing
 
-Here’s a **clean, GitHub-ready `README.md` section** you can paste directly into your repo. It’s formatted for clarity, scanning, and SEO.
-
 ---
 
 #  Installing Playwright (Python) on Ubuntu 24.04.3 LTS
