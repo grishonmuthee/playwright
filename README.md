@@ -151,11 +151,6 @@ playwright install
 
 ---
 
-## Resources
-
-* Official Playwright Python Docs:
-  [https://playwright.dev/python/docs/intro](https://playwright.dev/python/docs/intro)
-
 ---
 
 
