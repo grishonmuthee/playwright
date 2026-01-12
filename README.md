@@ -29,7 +29,20 @@ Instead of scattered notes, this repo captures:
 
 ---
 
-#  Installing Playwright (Python) on Ubuntu 24.04.3 LTS
+## Quick Start
+
+```bash
+git clone https://github.com/yourusername/playwright-python.git
+cd playwright-python
+python3 -m venv venv
+source venv/bin/activate
+pip install playwright
+playwright install
+playwright install-deps
+
+---
+
+# Installing Playwright (Python) on Ubuntu 24.04.3 LTS
 
 
 ---
