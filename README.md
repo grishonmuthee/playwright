@@ -14,6 +14,182 @@ This repository serves as a reference and playground for using **Playwright with
 
 * Cross-browser testing
 
+Here’s a **clean, GitHub-ready `README.md` section** you can paste directly into your repo. It’s formatted for clarity, scanning, and SEO.
+
+---
+
+# 🎭 Installing Playwright (Python) on Ubuntu 24.04.3 LTS
+
+This guide walks you through installing **Playwright with Python** on **Ubuntu 24.04.3 LTS**, which is an **officially supported** Playwright platform.
+
+---
+
+## ✅ Prerequisites
+
+### Update system packages
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+### Install Python (if not already installed)
+
+Ubuntu 24.04 ships with **Python 3.12**, which Playwright supports.
+
+```bash
+python3 --version
+```
+
+If needed:
+
+```bash
+sudo apt install -y python3 python3-pip python3-venv
+```
+
+---
+
+## 🐍 Create a Virtual Environment (Recommended)
+
+Using a virtual environment keeps dependencies isolated.
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+You should now see `(venv)` in your terminal prompt.
+
+---
+
+## 🎭 Install Playwright (Python)
+
+### Install the Playwright package
+
+```bash
+pip install --upgrade pip
+pip install playwright
+```
+
+### Install browser binaries
+
+```bash
+playwright install
+```
+
+This installs:
+
+* Chromium
+* Firefox
+* WebKit
+
+---
+
+## 🧩 Install System Dependencies (Required)
+
+Ubuntu requires additional system libraries for browsers to run properly.
+
+```bash
+playwright install-deps
+```
+
+✅ On **Ubuntu 24.04 LTS**, this works out of the box.
+
+---
+
+## ✅ Verify the Installation
+
+Run this quick test to confirm everything works:
+
+```bash
+python - <<EOF
+from playwright.sync_api import sync_playwright
+
+with sync_playwright() as p:
+    browser = p.chromium.launch()
+    page = browser.new_page()
+    page.goto("https://example.com")
+    print(page.title())
+    browser.close()
+EOF
+```
+
+Expected output:
+
+```
+Example Domain
+```
+
+🎉 If you see this, Playwright is installed correctly.
+
+---
+
+## 👀 Run in Headful Mode (Visible Browser)
+
+To see the browser window while running:
+
+```python
+browser = p.chromium.launch(headless=False)
+```
+
+---
+
+## 🛠 Troubleshooting
+
+### `playwright install-deps` fails
+
+Fix broken dependencies and retry:
+
+```bash
+sudo apt --fix-broken install
+playwright install-deps
+```
+
+---
+
+### Browser permission issues
+
+Reinstall browser binaries inside your virtual environment:
+
+```bash
+playwright install
+```
+
+---
+
+## 📌 Best Practices
+
+* ✅ Use **Ubuntu 24.04 LTS**
+* ✅ Always use a **virtual environment**
+* ❌ Do not use `sudo pip`
+* ✅ Prefer `get_by_*` locators
+* ❌ Avoid hard waits like `wait_for_timeout`
+
+---
+
+## 📚 Resources
+
+* Official Playwright Python Docs:
+  [https://playwright.dev/python/docs/intro](https://playwright.dev/python/docs/intro)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Locators & best practices
 ---
 
