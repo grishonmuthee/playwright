@@ -1,0 +1,66 @@
+# Daily Progress Log – January 13, 2026
+
+**Project**: Browser Automation & Bot Detection Evasion Research  
+**Environment**: Ubuntu Linux ( 24.04+), Python 3.12 virtual environment (`headlessbot-env`)
+
+## Summary of Activities
+
+- **Selenium troubleshooting & stabilization**  
+  - Diagnosed and resolved "Chrome instance exited" / "SessionNotCreatedException" errors commonly seen on Ubuntu when running headless Chrome via Selenium.  
+  - Installed comprehensive system dependencies (including time_t64 variants: `libasound2t64`, `libatk-bridge2.0-0t64`, etc.) to support headless rendering and sandboxing.  
+  - Applied essential launch flags: `--no-sandbox`, `--disable-dev-shm-usage`, `--disable-gpu`, `--window-size=1920,1080`.  
+  - Successfully executed basic Google search automation script and implemented extraction of organic search results (title, URL, snippet).
+
+- **Playwright evaluation**  
+  - Installed and explored Playwright (synchronous API) as a modern alternative to Selenium.  
+  - Tested core features: auto-waiting, robust locators, full-page screenshots, and human-like behavior simulation (mouse movement, scrolling, keyboard inputs).  
+  - Created proof-of-concept scripts to:
+    - Navigate to YouTube, attempt video playback (Rick Astley example) with activity nudges to prevent auto-pause.
+    - Capture screenshots of bot detection test pages.
+
+- **SeleniumBase & Pure CDP Mode experimentation**  
+  - Installed SeleniumBase and tested **Pure CDP mode** (`sb_cdp.Chrome()`) for stealthier automation (no WebDriver footprint).  
+  - Resolved startup issues: missing `tkinter` (`python3-tk`), library dependencies, incorrect cleanup method (`.quit()` vs `.close()`).  
+  - Attempted full-page screenshots of CreepJS (https://abrahamjuliot.github.io/creepjs/) → identified API limitation (`full_page` not supported in CDP mode).  
+  - Implemented manual full-page capture workaround via JavaScript scroll height detection and window resizing.
+
+- **Bot detection & evasion testing**  
+  - Evaluated multiple public bot/headless detection test sites:
+    - CreepJS (abrahamjuliot.github.io/creepjs)
+    - Bot.sannysoft.com
+    - Browserscan.net
+    - Pixelscan.net
+    - Bot.incolumitas.com
+  - Observed common detection vectors: CDP leaks, `navigator.webdriver`, canvas/WebGL inconsistencies, behavioral anomalies, plugin tampering signals.  
+  - Applied basic evasion techniques: user-agent spoofing, blink feature disable, no-sandbox mode. Noted that advanced tests (especially CreepJS) frequently flag known automation tools even in headed mode.
+
+- **Screenshot automation**  
+  - Developed scripts to capture screenshots of bot detection pages using Selenium, Playwright, and SeleniumBase CDP mode.  
+  - Explored full-page capture techniques: manual window resizing (Selenium/SeleniumBase), native `full_page=True` (Playwright).  
+  - Documented limitations in SeleniumBase CDP mode for full-page screenshots and identified workarounds.
+
+## Key Learnings
+
+- Headless Chrome on Linux requires explicit dependency installation (especially t64 transitions on Ubuntu 24.04+).
+- Pure CDP mode in SeleniumBase offers strong stealth potential but has a different API surface (no `.cdp.` namespace, `.quit()` for cleanup).
+- Playwright generally provides better reliability and native full-page screenshot support compared to Selenium/SeleniumBase for visual capture tasks.
+- No single stealth method fully evades CreepJS-level detection; combining headed mode, real Chrome binary, behavioral simulation, and residential proxies is likely required for high trust scores.
+
+## Next Steps
+
+- Achieve consistent full-page screenshots across tools (prioritize Playwright native support).
+- Integrate residential proxy rotation to improve bot scores on CreepJS and similar platforms.
+- Evaluate advanced evasion forks (Patchright, rebrowser-playwright) for deeper CDP leak mitigation.
+- Organize all working scripts into repo folders with READMEs and commit today's progress.
+
+## Files / Commits to Consider Today
+
+- `selenium_google_search_extract.py` – Google search result extraction
+- `playwright_youtube_playback.py` – YouTube video simulation
+- `seleniumbase_cdp_screenshot.py` – Pure CDP mode screenshot attempts
+- `playwright_creepjs_fullpage.py` – Playwright full-page capture
+- `daily-progress-2026-01-13.md` – This log
+
+**Date**: January 13, 2026  
+**Location**: Kenya (EAT timezone)  
+**Status**: Active development – browser automation & anti-detection research
