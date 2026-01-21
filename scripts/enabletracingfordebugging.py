@@ -16,3 +16,5 @@ with sync_playwright() as p:
     print("Trace saved as trace.zip — open at https://trace.playwright.dev")
 
     context.close()
+
+
