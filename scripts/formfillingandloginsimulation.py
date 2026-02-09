@@ -18,7 +18,10 @@ with sync_playwright() as p:
     success_message = page.inner_text(".flash.success")
     print("Login result:", success_message)
 
+    
     # Take screenshot of success
     page.screenshot(path="login_success.png")
 
     browser.close()
+
+
