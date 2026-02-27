@@ -19,3 +19,7 @@ with sync_playwright() as p:
     print("PDF saved as hacker_news.pdf")
 
     browser.close()
+
+
+
+
